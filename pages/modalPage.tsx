@@ -2,9 +2,12 @@ import type { NextPage } from 'next'
 import { useState } from 'react';
 import cafeOptions from '../assets/cafeOptions';
 import Modal from '../components/modal';
-import Link from 'next/link';
+
 // import styles from '../styles/Home.module.css'
 // style="background-image: url(...)"
+
+
+// why does the modal work on this page but not index.js????
 
 const Home: NextPage = () => {
   const [area, setArea] = useState('');
@@ -14,33 +17,38 @@ const Home: NextPage = () => {
     setArea(event.target.value);
   }
 
+  const handleClick = ( event: any) => {
+    setShowModal(true);
+  }
 
   return (
-    <div className="bg-main-bg h-screen bg-center bg-no-repeat bg-cover overflow-hidden font-special">
+    <div className="bg-main-bg h-screen bg-center bg-no-repeat bg-cover overflow-hidden">
       <nav className='text-right w-full text-neutral-200'>
-        <Link href="#">sign-in / register</Link>
+        <p>sign-in/register</p>
+        <p>about</p>
       </nav>
         <main className='h-screen relative bottom-20 flex items-center'>
           <div className='bg-stone-200 w-1/2 lg:w-1/3 flex flex-col text-center mx-auto text-slate-700 opacity-90 pb-6 rounded'>
-            <header className=' pt-10 pb-5'>
-              <h1 className='text-3xl'>select a neighborhood</h1>
+            <header>
+              <h1 className='text-2xl py-10'>select a neighborhood</h1>
             </header>
-            <select value={area} onChange={handleChange} className="w-3/5 mx-auto text-center mb-4 pt-2 text-xl">
-              <option value="" disabled></option>
+            <select value={area} onChange={handleChange} className="w-3/4 mx-auto text-center">
              {cafeOptions.map((option) => <option value={option.value} key={option.value}>{option.label}</option> )}
             </select>
-
             {area !== '' && (
-              <button className='rounded-full bg-white w-fit px-5 pb-2 pt-3 mt-1 mx-auto'><Link href={`/${area}`}>find cafes</Link></button>
+              <button className='rounded-full bg-white w-fit px-5 py-2 mt-5 mx-auto' onClick={handleClick}>find cafe</button>
             )}
           </div>
         </main>
-        {/* {showModal && <Modal
+        <div>
+            <button onClick={() => setShowModal(true)}>Open Modal</button>
+            <Modal
                 onClose={() => setShowModal(false)}
                 show={showModal}
             >
                 Hello from the modal!
-        </Modal>} */}
+            </Modal>
+        </div>
     </div>
   )
 }
