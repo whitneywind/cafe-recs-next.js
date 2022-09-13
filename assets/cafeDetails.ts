@@ -104,6 +104,11 @@ export const cafeDetails: CafeArea[] = [
                 address: "1294 w sunset blvd",
                 parking: false,
             },
+            {
+                name: "canyon coffee",
+                address: "32423 sunset blvd",
+                parking: false
+            }
         ]
     },
     {
