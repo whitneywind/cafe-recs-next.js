@@ -2,7 +2,7 @@ import main from "../database/connection";
 import User from "../database/schema";
 
 export default function getUsers(req, res) {
-    main().catch(error => console.error(error));
+    main().catch(error => console.error('error with main in users', error));
 
     const { method } = req;
 
@@ -18,6 +18,11 @@ export default function getUsers(req, res) {
             res.status(405).end(`Method ${method} not allowed`)
             break;
     }
+
+    // const create = new User({ name: 'user13', email: 'email13' });
+    // create.save().then(() => {
+    //     res.status(200).json(create)
+    // })
 
 
 }

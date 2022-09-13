@@ -18,7 +18,7 @@ const UserSchema = new mongoose.Schema({
     email: String
 })
 
-const user = mongoose.model('User', UserSchema)
+const user = mongoose.models.User || mongoose.model('User', UserSchema)
 
 export default user;
 
