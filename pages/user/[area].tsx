@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { cafeDetails } from '../../assets/cafeDetails'
 import cafeOptions from '../../assets/cafeOptions'
 import { ArrowLeftCircleIcon } from '@heroicons/react/24/outline'
+import { HeartIcon } from '@heroicons/react/24/outline'
+import { useAppContext } from '../../context/AppContext'
 
 type Props = {}
 
@@ -13,6 +15,13 @@ const Area = (props: Props) => {
   const routerArea = cafeDetails.find(x => x.id == area);
   const neighborhood = routerArea?.cafes;
   const imgSrc = cafeOptions.find(x => x.value == area)?.img;
+
+  const { addToFavorites, favorites } = useAppContext();
+
+  const handleClick = (cafe: any) => {
+    addToFavorites(cafe);
+    console.log('favorites on cafe page: ', favorites)
+  }
 
   // const [neighborhood, setNeighborhood] = useState<CafeInfo[]>()
 
@@ -34,10 +43,17 @@ const Area = (props: Props) => {
       </header>
       <div className='flex flex-col w-2/3 mx-auto items-center'>
         {neighborhood && neighborhood.map((cafe) => {
-          return <div key={cafe.name} className="hover:drop-shadow-xl hover:cursor-pointer rounded-lg text-xl w-3/4 my-5 py-10 px-20 text-center bg-[#e4bb97] shadow-sm shadow-neutral-400">
+          return (
+          <div key={cafe.name} className="hover:drop-shadow-xl hover:cursor-pointer rounded-lg text-xl w-3/4 my-5 pt-10 pb-4 px-20 text-center bg-[#e4bb97] shadow-sm shadow-neutral-400 ">
             <h1 className='text-2xl'>{cafe.name}</h1>
-              {cafe.address}
+            <p className='text-lg'>{cafe.address}</p>
+            <div>
+              <button onClick={() => handleClick(cafe)}>
+                <HeartIcon className='h-9 mx-auto hover:cursor-pointer hover:text-white mt-3' />
+              </button>
             </div>
+          </div>
+          )
         })}
       </div>
     </div>

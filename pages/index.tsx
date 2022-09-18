@@ -4,6 +4,7 @@ import cafeOptions from '../assets/cafeOptions';
 import Link from 'next/link';
 import { BookmarkSquareIcon } from '@heroicons/react/24/outline'
 
+
 const Home: NextPage = () => {
   const [area, setArea] = useState('');
 
@@ -14,7 +15,7 @@ const Home: NextPage = () => {
   return (
     <div className="bg-main-bg h-screen bg-center bg-no-repeat bg-cover overflow-hidden font-special">
       <nav className='flex justify-around xs:w-1/2 sm:w-1/3 md:w-1/4 lg:w-full lg:justify-between right-0 absolute align-right sm:pr-5 lg:pl-5 lg:bg-[#D8B283] rounded-bl-lg items-center'>
-        <Link href="#" className=''>
+        <Link href="/user/favorites" className=''>
           <BookmarkSquareIcon className='h-9 text-stone-200 lg:text-white hover:cursor-pointer hover:text-stone-400' />
         </Link>
         <Link href="/user/register">
