@@ -1,7 +1,11 @@
+import { StaticImageData } from "next/image";
+
 export interface CafeInfo {
     name: string,
     address: string,
     parking?: boolean,
+    image?: string | StaticImageData,
+    isFavorite?: boolean
 }
 
 export interface CafeArea {

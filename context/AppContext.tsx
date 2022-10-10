@@ -1,11 +1,13 @@
 import React, { createContext, useContext, useReducer } from 'react'
 import { reducer } from './reducers'
+import { CafeInfo } from '../types'
 
 type InitialStateType = {
     user: boolean;
-    favorites: Array<string> | any;
+    favorites: Array<string>;
     toggleUser?: any;
-    addToFavorites?: any
+    addToFavorites?: any,
+    removeFromFavorites?: any
 }
 
 const defaultState: InitialStateType = {
@@ -30,8 +32,9 @@ const AppProvider: React.FC = ({ children }: ProviderProps) => {
         dispatch({ type: "TOGGLE_FAVORITE" });
     }
 
-    const addToFavorites = (cafe: String) => {
-        const updatedFavorites = state.favorites.push(cafe);
+    const addToFavorites = (cafe: CafeInfo) => {
+        const updatedFavorites = state.favorites;
+        updatedFavorites.push(cafe.name)
         dispatch({
             type: "ADD_TO_FAVORITES",
             payload: {
@@ -40,13 +43,21 @@ const AppProvider: React.FC = ({ children }: ProviderProps) => {
         });
     };
 
+    const removeFromFavorites = (cafe: CafeInfo) => {
+        dispatch({
+            type: "REMOVE_FROM_FAVORITES",
+            payload: cafe
+        })
+    }
+
     return (
         <AppContext.Provider value={{
             favorites: state.favorites,
             ...state,
             toggleUser,
             toggleFavorite,
-            addToFavorites 
+            addToFavorites,
+            removeFromFavorites, 
         }}>
             {children}
         </AppContext.Provider>

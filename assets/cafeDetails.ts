@@ -1,4 +1,5 @@
 import { CafeInfo, CafeArea } from "../types"
+import shirohigeImg from '../assets/cafe-photos/shirohige.jpg'
 
 export const cafeDetails: CafeArea[] = [
     {
@@ -127,6 +128,28 @@ export const cafeDetails: CafeArea[] = [
             },
             {
                 name: "all time",
+                address: "2040 hillhurst ave",
+                parking: false,
+            },
+        ]
+    },
+    {
+        area: "tokyo",
+        id: "tokyo",
+        cafes: [
+            {
+                name: "cafe kitsune",
+                address: "2066 hillhurst ave",
+                parking: true,
+            },
+            {
+                name: "shirohige's cream puff shop",
+                address: "1936 hillhurst ave",
+                parking: false,
+                image: shirohigeImg
+            },
+            {
+                name: "omnibus",
                 address: "2040 hillhurst ave",
                 parking: false,
             },

@@ -6,7 +6,7 @@ import sawtelleImg from '../assets//area-photos/sawtelle.jpg'
 import echoparkImg from '../assets//area-photos/echopark.jpg'
 import losfelizImg from '../assets/area-photos/losfeliz.jpg'
 
-const cafeOptions : CafeList[] = [
+const cafeOptionsSeoul : CafeList[] = [
     { label: 'arts district', value: 'arts-district', img: artsDistrictImg },
     { label: 'torrance', value: 'torrance', img: torranceImg },
     { label: 'koreatown', value: 'koreatown', img: koreatownImg},
@@ -15,4 +15,4 @@ const cafeOptions : CafeList[] = [
     { label: 'los feliz', value: 'los-feliz', img: losfelizImg },
   ]
 
-  export default cafeOptions
+  export default cafeOptionsSeoul;

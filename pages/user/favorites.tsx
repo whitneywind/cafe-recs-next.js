@@ -11,13 +11,14 @@ type Props = {
 }
 const favorites = () => {
     const { favorites } = useAppContext();
+    console.log(favorites)
 
   return (
     <div>favorites:
-      {favorites && favorites.map((cafe : Cafe) => {
+      {favorites && favorites.map((cafe : string) => {
         console.log(cafe)
-        return <div key={`${cafe.name}`}>
-          {cafe.name}
+        return <div key={`${cafe}`}>
+          {cafe}
         </div>
       })
     }
