@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useReducer } from 'react'
+import React, { FC, createContext, useContext, useReducer } from 'react'
 import { reducer } from './reducers'
 import { CafeInfo } from '../types'
 
@@ -12,16 +12,16 @@ type InitialStateType = {
 
 const defaultState: InitialStateType = {
     user: false,
-    favorites: [],
+    favorites: ["placeholder"],
 }
 
 interface ProviderProps {
     children?: React.ReactNode;
 }
 
-const AppContext = createContext(defaultState);
+const AppContext = createContext<InitialStateType>(defaultState);
 
-const AppProvider: React.FC = ({ children }: ProviderProps) => {
+const AppProvider: FC = (props: ProviderProps) => {
     const [state, dispatch] = useReducer(reducer, defaultState)
 
     const toggleUser = () => {
@@ -59,7 +59,7 @@ const AppProvider: React.FC = ({ children }: ProviderProps) => {
             addToFavorites,
             removeFromFavorites, 
         }}>
-            {children}
+            {props.children}
         </AppContext.Provider>
     )
 }

@@ -29,7 +29,7 @@ const Area = (props: Props) => {
     <div className='h-screen bg-[#fef5ef]'>
     <div className='h-100 bg-[#fef5ef] font-special'>
       <Link href="/">
-          <ArrowLeftCircleIcon className='h-9 ml-2 mt-2 z-10 text-white absolute hover:cursor-pointer' />
+          <ArrowLeftCircleIcon className='h-9 ml-3 mt-3 z-10 text-white absolute hover:cursor-pointer' />
         </Link>
       <header>
         <div id="banner-image" style={{backgroundImage: `url(${imgSrc?.src})`}} className="bg-lime-800/90 h-72 text-center bg-cover bg-center">
