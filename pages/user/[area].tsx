@@ -17,6 +17,7 @@ const Area = (props: Props) => {
 
   const routerArea = cafeDetails.find(x => x.id == area);
   const neighborhood = routerArea?.cafes;
+  
   const imgSrc = area === 'tokyo' || area === 'osaka' || area === 'kyoto' || area === 'fukuoka' ? cafeOptionsJapan.find(x => x.value == area)?.img : cafeOptions.find(x => x.value == area)?.img;
 
   const { addToFavorites, favorites } = useAppContext();

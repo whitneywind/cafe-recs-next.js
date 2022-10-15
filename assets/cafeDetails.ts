@@ -12,7 +12,7 @@ export const cafeDetails: CafeArea[] = [
                 parking: true,
             },
             {
-                name: "maru",
+                name: "maru arts district",
                 address: "1019 S Santa Fe Ave",
                 parking: false,
             },
