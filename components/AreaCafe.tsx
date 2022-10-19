@@ -10,13 +10,11 @@ const AreaCafe = (cafe: CafeInfo, index: Number) => {
 
     useEffect(() => {
       const cafeIsFavorite = favorites.indexOf(cafe.name) >= 0;
-
       if (cafeIsFavorite) {
         setIsFavorite(true)
       } else {
         setIsFavorite(false)
       }
-     
     }, [favorites])
   
     const handleClick = () => {
@@ -27,7 +25,6 @@ const AreaCafe = (cafe: CafeInfo, index: Number) => {
         addToFavorites(cafe);
         setIsFavorite(true);
       }
-      console.log(isFavorite)
     }
 
   return (

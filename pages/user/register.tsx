@@ -22,10 +22,7 @@ const Register: NextPage = () => {
     }
 
     const handleSubmit = (e: SyntheticEvent) => {
-        console.log('user: ', user);
-        console.log('before toggling', `${user}`)
         toggleUser();
-        console.log('after toggling', `${user}`)
     }
 
     return (

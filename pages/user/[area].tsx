@@ -13,16 +13,13 @@ const Area = (props: Props) => {
   const router = useRouter();
   const { area } = router.query;
 
+  const tokyoAreas = ['tokyo', 'osaka', 'kyoto', 'fukuoka'];
+
   const routerArea = cafeDetails.find(x => x.id == area);
   const neighborhood = routerArea?.cafes;
+  console.log(typeof area)
 
-  const imgSrc = area === 'tokyo' || area === 'osaka' || area === 'kyoto' || area === 'fukuoka' ? cafeOptionsJapan.find(x => x.value == area)?.img : cafeOptions.find(x => x.value == area)?.img;
-
-  const { addToFavorites, favorites } = useAppContext();
-
-  const handleClick = (cafe: any) => {
-    addToFavorites(cafe);
-  }
+  const imgSrc = tokyoAreas.find(neighborhood => neighborhood === area) ? cafeOptionsJapan.find(neighborhood => neighborhood.value == area)?.img : cafeOptions.find(neighborhood => neighborhood.value == area)?.img;
 
   return (
     <div className='h-screen bg-[#fef5ef]'>
