@@ -4,9 +4,7 @@ import { cafeDetails } from '../../assets/cafeDetails'
 import cafeOptions from '../../assets/cafeOptions'
 import cafeOptionsJapan from '../../assets/cafeOptionsJapan'
 import { ArrowLeftCircleIcon } from '@heroicons/react/24/outline'
-import { HeartIcon } from '@heroicons/react/24/outline'
 import { useAppContext } from '../../context/AppContext'
-import { useState } from 'react'
 import AreaCafe from '../../components/AreaCafe';
 
 type Props = {}
@@ -17,7 +15,7 @@ const Area = (props: Props) => {
 
   const routerArea = cafeDetails.find(x => x.id == area);
   const neighborhood = routerArea?.cafes;
-  
+
   const imgSrc = area === 'tokyo' || area === 'osaka' || area === 'kyoto' || area === 'fukuoka' ? cafeOptionsJapan.find(x => x.value == area)?.img : cafeOptions.find(x => x.value == area)?.img;
 
   const { addToFavorites, favorites } = useAppContext();

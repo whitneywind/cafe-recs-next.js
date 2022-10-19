@@ -53,5 +53,3 @@ const AreaCafe = (cafe: CafeInfo, index: Number) => {
   )
 }
 export default AreaCafe
-
-// favorites.includes(`${cafe.name}`)
