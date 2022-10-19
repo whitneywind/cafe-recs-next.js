@@ -153,16 +153,16 @@ export const cafeDetails: CafeArea[] = [
         id: "los-feliz",
         cafes: [
             {
-                name: "blue bottle",
-                address: "2066 hillhurst ave",
-                parking: true,
-                areaImg: losfelizImg,
-            },
-            {
                 name: "maru",
                 address: "1936 hillhurst ave",
                 parking: false,
                 image: maruFeliz,
+                areaImg: losfelizImg,
+            },
+            {
+                name: "blue bottle",
+                address: "2066 hillhurst ave",
+                parking: true,
                 areaImg: losfelizImg,
             },
             {
