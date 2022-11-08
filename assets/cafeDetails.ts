@@ -8,6 +8,7 @@ import echoparkImg from '../assets//area-photos/echopark.jpg'
 import losfelizImg from '../assets/area-photos/losfeliz.jpg'
 
 import tokyoImg from '../assets/area-photos/tokyo.jpg'
+// import osakaImg from '../assets/area-photos/osaka.jpg'
 
 // cafe images
 import shirohigeImg from '../assets/cafe-photos/shirohige.jpg'
@@ -18,6 +19,31 @@ import yeems from '../assets/cafe-photos/yeems.jpg'
 import maruFeliz from '../assets/cafe-photos/maruFeliz.jpg'
 
 export const cafeDetails: CafeArea[] = [
+    {
+        area: "los feliz",
+        id: "los-feliz",
+        cafes: [
+            {
+                name: "maru",
+                address: "1936 hillhurst ave",
+                parking: false,
+                image: maruFeliz,
+                areaImg: losfelizImg,
+            },
+            {
+                name: "blue bottle",
+                address: "2066 hillhurst ave",
+                parking: true,
+                areaImg: losfelizImg,
+            },
+            {
+                name: "all time",
+                address: "2040 hillhurst ave",
+                parking: false,
+                areaImg: losfelizImg,
+            },
+        ]
+    },
     {
         area: "arts district",
         id: "arts-district",
@@ -149,31 +175,6 @@ export const cafeDetails: CafeArea[] = [
         ]
     },
     {
-        area: "los feliz",
-        id: "los-feliz",
-        cafes: [
-            {
-                name: "maru",
-                address: "1936 hillhurst ave",
-                parking: false,
-                image: maruFeliz,
-                areaImg: losfelizImg,
-            },
-            {
-                name: "blue bottle",
-                address: "2066 hillhurst ave",
-                parking: true,
-                areaImg: losfelizImg,
-            },
-            {
-                name: "all time",
-                address: "2040 hillhurst ave",
-                parking: false,
-                areaImg: losfelizImg,
-            },
-        ]
-    },
-    {
         area: "tokyo",
         id: "tokyo",
         cafes: [
@@ -191,10 +192,106 @@ export const cafeDetails: CafeArea[] = [
                 areaImg: tokyoImg,
             },
             {
-                name: "omnibus",
+                name: "cafe reissue",
                 address: "2040 hillhurst ave",
                 parking: false,
                 areaImg: tokyoImg,
+            },
+            {
+                name: "the little bakery",
+                address: "2040 hillhurst ave",
+                parking: false,
+                areaImg: tokyoImg,
+            },
+            {
+                name: "cookie time",
+                address: "2040 hillhurst ave",
+                parking: false,
+                areaImg: tokyoImg,
+            },
+            {
+                name: "oshiage nyanko",
+                address: "2040 hillhurst ave",
+                parking: false,
+                areaImg: tokyoImg,
+            },
+        ]
+    },
+    {
+        area: "osaka",
+        id: "osaka",
+        cafes: [
+            {
+                name: "usagi to boku",
+                address: "2066 hillhurst ave",
+                parking: true,
+            },
+            {
+                name: "shirohige's cream puff shop",
+                address: "1936 hillhurst ave",
+                parking: false,
+            },
+            {
+                name: "jtrrd",
+                address: "2040 hillhurst ave",
+                parking: false,
+
+            },
+        ]
+    },
+    {
+        area: "fukuoka",
+        id: "fukuoka",
+        cafes: [
+            {
+                name: "mume",
+                address: "2066 hillhurst ave",
+                parking: true,
+            },
+            {
+                name: "tagashira tea",
+                address: "1936 hillhurst ave",
+                parking: false,
+            },
+            {
+                name: "hachi matcha",
+                address: "2040 hillhurst ave",
+                parking: false,
+
+            },
+            {
+                name: "shirogane sabo",
+                address: "2040 hillhurst ave",
+                parking: false,
+
+            },
+        ]
+    },
+    {
+        area: "kyoto",
+        id: "kyoto",
+        cafes: [
+            {
+                name: "arabica",
+                address: "2066 hillhurst ave",
+                parking: true,
+            },
+            {
+                name: "miffy sakura",
+                address: "1936 hillhurst ave",
+                parking: false,
+            },
+            {
+                name: "gion tsujiri",
+                address: "2040 hillhurst ave",
+                parking: false,
+
+            },
+            {
+                name: "ippodo matcha",
+                address: "2040 hillhurst ave",
+                parking: false,
+
             },
         ]
     },

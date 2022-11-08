@@ -12,7 +12,7 @@ type InitialStateType = {
 
 const defaultState: InitialStateType = {
     user: false,
-    favorites: ["placeholder"],
+    favorites: [],
 }
 
 interface ProviderProps {

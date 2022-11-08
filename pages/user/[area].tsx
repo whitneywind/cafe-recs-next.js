@@ -17,7 +17,7 @@ const Area = (props: Props) => {
 
   const routerArea = cafeDetails.find(x => x.id == area);
   const neighborhood = routerArea?.cafes;
-  console.log(typeof area)
+
 
   const imgSrc = tokyoAreas.find(neighborhood => neighborhood === area) ? cafeOptionsJapan.find(neighborhood => neighborhood.value == area)?.img : cafeOptions.find(neighborhood => neighborhood.value == area)?.img;
 
