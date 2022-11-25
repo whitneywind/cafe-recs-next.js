@@ -1,13 +1,11 @@
-import mongoose, { Mongoose } from 'mongoose'
+import mongoose from 'mongoose'
 
 const CafeSchema = new mongoose.Schema({
-    city: String,
-    area: String,
     name: String,
     address: String,
-    image: String
+    neighborhood: String
 })
 
-const cafe = mongoose.models.Cafe || mongoose.model('cafe', CafeSchema)
+const cafe = mongoose.models.Cafe || mongoose.model('Cafe', CafeSchema)
 
 export default cafe;

@@ -1,15 +1,15 @@
-import connect from '../database/connection'
-import cafe from '../database/cafeSchema'
+import connect from '../database/connection';
+import cafe from '../database/cafeSchema';
 
 connect();
 
-export default async function handler(res, req) {
+export default async function handler(req, res) {
     try {
         const Cafe = await cafe.create(req.body);
-        console.log(req.body);
+        console.log(req.body)
         res.redirect('/')
         if (!Cafe) {
-            return res.json('cafe not created')
+            return res.json({"code": 'Cafe not created'})
         }
     } catch (error) {
         res.status(400).json({status: 'not able to create a new cafe'})

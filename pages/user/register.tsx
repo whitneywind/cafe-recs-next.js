@@ -36,7 +36,7 @@ const Register: NextPage = () => {
                     <h1 className='text-4xl font-bold'>register</h1>
                 </header>
                 <main className='text-center flex flex-col pb-8 items-center'>
-                    <input onChange={handleChange} required type="name" name="name" placeholder="   name" className='bg-[#FAF5EF]rounded my-2 pt-2 text-lg w-4/5' />
+                    <input onChange={handleChange} required type="text" name="name" placeholder="   name" className='bg-[#FAF5EF]rounded my-2 pt-2 text-lg w-4/5' />
                     <input onChange={handleChange} required type="email" name="email" placeholder="   email" className='rounded my-2 pt-2 text-lg w-4/5' />
                     <input onChange={handleChange} required type="password" name="password" placeholder="password" className='rounded my-2 pt-2 text-lg w-4/5' />
                     <button className='bg-[#96897B] w-fit px-3 rounded-md mt-6 text-lg pt-1 text-white' type="submit">sign-up</button>
@@ -44,7 +44,9 @@ const Register: NextPage = () => {
             </form>
             <div className='col-span-1 bg-[#96897B] text-white flex flex-col rounded-r'>
                 <p className='flex text-xl font-semibold w-100 mx-auto pt-32 pb-4 text-center'>have an account?</p>
-                <button className='bg-[#fef5ef] w-fit px-3 mx-auto rounded-md text-lg text-black pt-1'><Link href="/user/sign-in">sign-in</Link></button>
+                <button className='bg-[#fef5ef] w-fit px-3 mx-auto rounded-md text-lg text-black pt-1'>
+                    <Link href="/user/sign-in">sign-in</Link>
+                </button>
             </div>
         </div>
     </div>

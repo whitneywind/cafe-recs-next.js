@@ -4,7 +4,6 @@ import { cafeDetails } from '../../assets/cafeDetails'
 import cafeOptions from '../../assets/cafeOptions'
 import cafeOptionsJapan from '../../assets/cafeOptionsJapan'
 import { ArrowLeftCircleIcon } from '@heroicons/react/24/outline'
-import { PlusCircleIcon } from '@heroicons/react/24/outline'
 import { useAppContext } from '../../context/AppContext'
 import AreaCafe from '../../components/AreaCafe';
 import AddCafeModal from '../../components/AddCafeModal'
