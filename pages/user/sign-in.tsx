@@ -22,9 +22,6 @@ const Register: NextPage = (props): JSX.Element => {
             password: userInfo.password,
             redirect: false,
         });
-
-        console.log(signIn)
-        console.log(userInfo, res);
         
         router.push('../auth/protected')
 

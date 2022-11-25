@@ -24,7 +24,7 @@ const Home: NextPage = () => {
         </Link>
       </nav>
         <main className='flex items-center mt-7'>
-          <div className='bg-[#C3A88D] h-100 mt-48 w-1/2 lg:w-1/3 flex flex-col text-center mx-auto text-white pb-6 rounded'>
+          <div className='bg-[#C3A88D]/10 h-100 mt-48 w-1/2 lg:w-1/3 flex flex-col text-center mx-auto text-white pb-6 rounded'>
             <header className=' pt-10 pb-5'>
               <h1 className='text-3xl'>{!area ? 'select a neighborhood' : 'neighborhood:'}</h1>
             </header>
