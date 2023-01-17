@@ -9,7 +9,7 @@ const AreaCafe = (cafe: CafeInfo, index: Number) => {
     const [isFavorite, setIsFavorite] = useState(false);
 
     useEffect(() => {
-      const cafeIsFavorite = favorites.indexOf(cafe.name) >= 0;
+      const cafeIsFavorite = favorites.find((item: CafeInfo) => item.name === cafe.name) !== undefined;
       if (cafeIsFavorite) {
         setIsFavorite(true)
       } else {

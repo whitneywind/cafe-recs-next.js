@@ -4,7 +4,7 @@ import { CafeInfo } from '../types'
 
 type InitialStateType = {
     user: boolean;
-    favorites: Array<string>;
+    favorites: Array<CafeInfo>;
     toggleUser?: any;
     addToFavorites?: any,
     removeFromFavorites?: any
@@ -34,7 +34,9 @@ const AppProvider: FC = (props: ProviderProps) => {
 
     const addToFavorites = (cafe: CafeInfo) => {
         const updatedFavorites = state.favorites;
-        updatedFavorites.push(cafe.name)
+        console.log('type is: ', typeof cafe)
+        console.log(cafe)
+        updatedFavorites.push(cafe)
         dispatch({
             type: "ADD_TO_FAVORITES",
             payload: {

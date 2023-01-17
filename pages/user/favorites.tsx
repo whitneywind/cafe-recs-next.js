@@ -23,9 +23,9 @@ const favorites = () => {
         <h1 className='text-6xl text-neutral-700'>my favorites</h1>
         <div className='bg-white h-fit w-2/5 rounded '>
           {!favorites || favorites.length === 0 && <div>no favorites to show</div>}
-          {favorites && favorites.map((cafe : string) => {
-            return <div key={`${cafe}`} className="text-3xl my-5 text-center ">
-              {cafe}
+          {favorites && favorites.map((cafe) => {
+            return <div key={`${cafe.id ? cafe.id : cafe.name}`} className="text-3xl my-5 text-center ">
+              {cafe.address}
               <ArrowSmallRightIcon className='h-7 mx-auto mb-3'/>
               <hr />
             </div>

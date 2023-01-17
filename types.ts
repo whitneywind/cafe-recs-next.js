@@ -6,7 +6,8 @@ export interface CafeInfo {
     parking?: boolean,
     image?: string | StaticImageData,
     areaImg?: string | any,
-    isFavorite?: boolean
+    isFavorite?: boolean,
+    id?: number
 }
 
 export interface CafeArea {
