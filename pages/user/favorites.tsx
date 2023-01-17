@@ -3,18 +3,13 @@ import { ArrowLeftCircleIcon } from '@heroicons/react/24/outline'
 import { ArrowSmallRightIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import SearchBar from '../../components/SearchBar'
-
-interface Cafe {
-  name: String;
-  address: String;
-  parking: Boolean
-}
+import { Cafe } from '../../types'
 
 type Props = {
   cafe: Cafe
 }
 const favorites = () => {
-    const { favorites } = useAppContext();
+  const { favorites } = useAppContext();
 
   return (
     <main className='bg-[#DFB77C]/70 h-screen overflow-hidden font-special w-screen border-white'>
@@ -41,4 +36,5 @@ const favorites = () => {
     </main>
   )
 }
+
 export default favorites

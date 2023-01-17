@@ -20,3 +20,9 @@ export interface CafeList {
     value: string;
     img?: string | any,
   }
+
+ export interface Cafe {
+    name: String;
+    address: String;
+    parking: Boolean
+  }

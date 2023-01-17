@@ -4,11 +4,14 @@ import { cafeDetails } from '../../assets/cafeDetails'
 import cafeOptions from '../../assets/cafeOptions'
 import cafeOptionsJapan from '../../assets/cafeOptionsJapan'
 import { ArrowLeftCircleIcon } from '@heroicons/react/24/outline'
-import { useAppContext } from '../../context/AppContext'
 import AreaCafe from '../../components/AreaCafe';
 import AddCafeModal from '../../components/AddCafeModal'
+import { GetServerSideProps } from 'next'
+import connect from '../database/connection'
 
-type Props = {}
+type Props = {
+  caves?: {}
+}
 
 const Area = (props: Props) => {
   const router = useRouter();
@@ -40,10 +43,7 @@ const Area = (props: Props) => {
             <AreaCafe key={index} {...data} />
             )
           })}
-          {/* <div className='pt-5 pb-12'>
-            <PlusCircleIcon className='h-12 hover:cursor-pointer' />
-            
-        </div> */}
+          
         </div>
       </div>
     </div>
@@ -54,13 +54,21 @@ export default Area
 
 // use when getting data from outside
 
-// export const getServerSideProps: GetServerSideProps = async (context) => {
-//   const res = await fetch(`adsfasdfas${context.query.id}`);
-//   const character = await res.json();
+// export const getServerSideProps: GetServerSideProps = async () => {
+//   let caves;
+//   try {
+//     const client = await connect();
+//     const db = client.db("caves");
 
+//     caves = await db
+//       .collection("caves")
+//       .find({})
+//       .limit(20)
+//       .toArray();
+//   } catch (e) {
+//     console.log(e);
+//   }
 //   return {
-//     props: {
-//       character,
-//     },
-//   };
+//     props: { caves: JSON.parse(JSON.stringify(caves)) },
+// };
 // };
