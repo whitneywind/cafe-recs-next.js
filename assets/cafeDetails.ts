@@ -29,18 +29,21 @@ export const cafeDetails: CafeArea[] = [
                 parking: false,
                 image: maruFeliz,
                 areaImg: losfelizImg,
+                area: 'los-feliz'
             },
             {
                 name: "blue bottle",
                 address: "2066 hillhurst ave",
                 parking: true,
                 areaImg: losfelizImg,
+                area: 'los-feliz'
             },
             {
                 name: "all time",
                 address: "2040 hillhurst ave",
                 parking: false,
                 areaImg: losfelizImg,
+                area: 'los-feliz'
             },
         ]
     },
@@ -53,18 +56,21 @@ export const cafeDetails: CafeArea[] = [
                 address: "500 Mateo Street",
                 parking: true,
                 areaImg: artsDistrictImg,
+                area: "arts-district"
             },
             {
                 name: "maru arts district",
                 address: "1019 S Santa Fe Ave",
                 parking: false,
                 areaImg: artsDistrictImg,
+                area: "arts-district"
             },
             {
                 name: "rykn",
                 address: "710 S Santa Fe Ave",
                 parking: false,
                 areaImg: artsDistrictImg,
+                area: "arts-district"
             },
         ]
     },
@@ -77,18 +83,21 @@ export const cafeDetails: CafeArea[] = [
                 address: "1740 artesia blvd",
                 parking: true,
                 areaImg: torranceImg,
+                area: "torrance"
             },
             {
                 name: "yamari",
                 address: "3525 w carson st.",
                 parking: true,
                 areaImg: torranceImg,
+                area: "torrance"
             },
             {
                 name: "corridor flow",
                 address: "24614 narbonne ave",
                 parking: true,
                 areaImg: torranceImg,
+                area: "torrance"
             },
         ]
     },
@@ -102,12 +111,14 @@ export const cafeDetails: CafeArea[] = [
                 parking: true,
                 image: yeems,
                 areaImg: koreatownImg,
+                area: "koreatown"
             },
             {
                 name: "sharp specialty coffee",
                 address: "3421 w 6th st",
                 parking: false,
                 areaImg: koreatownImg,
+                area: "koreatown"
             },
             {
                 name: "3thyme",
@@ -115,6 +126,7 @@ export const cafeDetails: CafeArea[] = [
                 parking: false,
                 image: thyme,
                 areaImg: koreatownImg,
+                area: "koreatown"
             },
         ]
     },
@@ -127,18 +139,21 @@ export const cafeDetails: CafeArea[] = [
                 address: "1854 sawtelle blvd",
                 parking: false,
                 areaImg: sawtelleImg,
+                area: "sawtelle"
             },
             {
                 name: "teaspoon",
                 address: "1947 sawtelle blvd",
                 parking: false,
                 areaImg: sawtelleImg,
+                area: "sawtelle"
             },
             {
                 name: "kiff kafe",
                 address: "12229 w pico blvd",
                 parking: false,
                 areaImg: sawtelleImg,
+                area: "sawtelle"
             },
         ]
     },
@@ -151,12 +166,14 @@ export const cafeDetails: CafeArea[] = [
                 address: "1501 sunset blvd",
                 parking: true,
                 areaImg: echoparkImg,
+                area: "echo-park"
             },
             {
                 name: "konbi",
                 address: "1463 sunset blvd",
                 parking: false,
                 areaImg: echoparkImg,
+                area: "echo-park"
             },
             {
                 name: "eightfold coffee",
@@ -164,6 +181,7 @@ export const cafeDetails: CafeArea[] = [
                 parking: false,
                 image: eightfold2,
                 areaImg: echoparkImg,
+                area: "echo-park"
             },
             {
                 name: "canyon coffee",
@@ -171,6 +189,7 @@ export const cafeDetails: CafeArea[] = [
                 parking: false,
                 image: canyoncoffee,
                 areaImg: echoparkImg,
+                area: "echo-park"
             }
         ]
     },
@@ -183,6 +202,7 @@ export const cafeDetails: CafeArea[] = [
                 address: "2066 hillhurst ave",
                 parking: true,
                 areaImg: tokyoImg,
+                area: "tokyo"
             },
             {
                 name: "shirohige's cream puff shop",
@@ -190,30 +210,35 @@ export const cafeDetails: CafeArea[] = [
                 parking: false,
                 image: shirohigeImg,
                 areaImg: tokyoImg,
+                area: "tokyo"
             },
             {
                 name: "cafe reissue",
                 address: "2040 hillhurst ave",
                 parking: false,
                 areaImg: tokyoImg,
+                area: "tokyo"
             },
             {
                 name: "the little bakery",
                 address: "2040 hillhurst ave",
                 parking: false,
                 areaImg: tokyoImg,
+                area: "tokyo"
             },
             {
                 name: "cookie time",
                 address: "2040 hillhurst ave",
                 parking: false,
                 areaImg: tokyoImg,
+                area: "tokyo"
             },
             {
                 name: "oshiage nyanko",
                 address: "2040 hillhurst ave",
                 parking: false,
                 areaImg: tokyoImg,
+                area: "tokyo"
             },
         ]
     },
@@ -225,16 +250,19 @@ export const cafeDetails: CafeArea[] = [
                 name: "usagi to boku",
                 address: "2066 hillhurst ave",
                 parking: true,
+                area: "osaka"
             },
             {
                 name: "shirohige's cream puff shop",
                 address: "1936 hillhurst ave",
                 parking: false,
+                area: "osaka"
             },
             {
                 name: "jtrrd",
                 address: "2040 hillhurst ave",
                 parking: false,
+                area: "osaka"
 
             },
         ]
@@ -247,22 +275,26 @@ export const cafeDetails: CafeArea[] = [
                 name: "mume",
                 address: "2066 hillhurst ave",
                 parking: true,
+                area: "fukuoka"
             },
             {
                 name: "tagashira tea",
                 address: "1936 hillhurst ave",
                 parking: false,
+                area: "fukuoka"
             },
             {
                 name: "hachi matcha",
                 address: "2040 hillhurst ave",
                 parking: false,
+                area: "fukuoka"
 
             },
             {
                 name: "shirogane sabo",
                 address: "2040 hillhurst ave",
                 parking: false,
+                area: "fukuoka"
 
             },
         ]
@@ -275,22 +307,26 @@ export const cafeDetails: CafeArea[] = [
                 name: "arabica",
                 address: "2066 hillhurst ave",
                 parking: true,
+                area: "kyoto"
             },
             {
                 name: "miffy sakura",
                 address: "1936 hillhurst ave",
                 parking: false,
+                area: "kyoto"
             },
             {
                 name: "gion tsujiri",
                 address: "2040 hillhurst ave",
                 parking: false,
+                area: "kyoto"
 
             },
             {
                 name: "ippodo matcha",
                 address: "2040 hillhurst ave",
                 parking: false,
+                area: "kyoto"
 
             },
         ]

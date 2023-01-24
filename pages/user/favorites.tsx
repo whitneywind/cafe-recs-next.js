@@ -10,6 +10,7 @@ type Props = {
 }
 const favorites = () => {
   const { favorites } = useAppContext();
+  const area = 'tokyo';
 
   return (
     <main className='bg-[#DFB77C]/70 h-screen overflow-hidden font-special w-screen border-white'>
@@ -25,8 +26,10 @@ const favorites = () => {
           {!favorites || favorites.length === 0 && <div>no favorites to show</div>}
           {favorites && favorites.map((cafe) => {
             return <div key={`${cafe.id ? cafe.id : cafe.name}`} className="text-3xl my-5 text-center ">
-              {cafe.address}
-              <ArrowSmallRightIcon className='h-7 mx-auto mb-3'/>
+              <p>{cafe.name}</p>
+              <Link href={`/user/${cafe.area ? cafe.area : area}`}>
+                <ArrowSmallRightIcon className='h-7 mx-auto mb-3'/>
+              </Link>
               <hr />
             </div>
           })

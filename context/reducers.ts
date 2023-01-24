@@ -22,7 +22,7 @@ export const reducer = (state: any, action: any) => {
     if (type === REMOVE_FROM_FAVORITES) {
         return {
             ...state,
-            favorites: state.favorites.filter((fav: String) => fav !== payload.name)
+            favorites: payload.favorites
         }
     }
     throw new Error(`no case for this type ${type}`)

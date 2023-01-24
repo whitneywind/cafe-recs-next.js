@@ -9,8 +9,8 @@ const AreaCafe = (cafe: CafeInfo, index: Number) => {
     const [isFavorite, setIsFavorite] = useState(false);
 
     useEffect(() => {
-      const cafeIsFavorite = favorites.find((item: CafeInfo) => item.name === cafe.name) !== undefined;
-      if (cafeIsFavorite) {
+      const cafeIsAlreadyFavorite = favorites.find((item: CafeInfo) => item.name === cafe.name) !== undefined;
+      if (cafeIsAlreadyFavorite) {
         setIsFavorite(true)
       } else {
         setIsFavorite(false)
@@ -18,6 +18,7 @@ const AreaCafe = (cafe: CafeInfo, index: Number) => {
     }, [favorites])
   
     const handleClick = () => {
+      console.log('is a favorite: ', isFavorite)
       if (isFavorite) {
         removeFromFavorites(cafe);
         setIsFavorite(false);

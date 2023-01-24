@@ -24,7 +24,7 @@ export function Modal(props: ModalType) {
                 onClick={props.toggle}
             >
                 <div
-                    className="block bg-white w-1/2 h-1/2 rounded-lg"
+                    className="block bg-white w-3/4 md:w-1/2 mid-h-fit rounded-lg"
                     onClick={(e) => e.stopPropagation()}
                 >
                     {props.children}
@@ -62,11 +62,11 @@ const AddCafe: NextPage = () => {
             <div>
                 <form onSubmit={handleSubmit} action="/api/registerCafe" method="post">
                     <header className="bg-[#ba997b] p-3 pt-5 text-2xl text-center text-white">Add a Cafe</header>
-                    <main className="text-center flex flex-col">
-                        <input onChange={handleChange} required type="text" name="name" placeholder="name" className='' />
-                        <input onChange={handleChange} required type="text" name="address" placeholder="address" className='' />
-                        <input onChange={handleChange} required type="text" name="neighborhood" placeholder="neighborhood" className='' />
-                        <button className='bg-[#ba997b] w-fit px-3 rounded-sm text-lg pt-1 text-white' type="submit">submit</button>
+                    <main className="w-100 flex flex-col px-6 mb-7 md:my-8 md:space-y-4 mt-8 overflow-hidden">
+                        <input onChange={handleChange} required type="text" name="name" placeholder="name" className='mx-auto px-2 py-3 w-full text-lg' />
+                        <input onChange={handleChange} required type="text" name="address" placeholder="address" className='mx-auto px-2 py-3 w-full text-lg' />
+                        <input onChange={handleChange} required type="text" name="neighborhood" placeholder="neighborhood" className='mx-auto px-2 py-3 w-full text-lg' />
+                        <button className='bg-[#ba997b] w-fit px-4 rounded-md text-xl pt-3 pb-2 text-white self-center' type="submit">submit</button>
                     </main>
                 </form>
             </div>

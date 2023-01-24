@@ -1,5 +1,12 @@
 import { StaticImageData } from "next/image";
 
+
+export interface CafeArea {
+    area: string,
+    id: string,
+    cafes: CafeInfo[],
+}
+
 export interface CafeInfo {
     name: string,
     address: string,
@@ -7,13 +14,8 @@ export interface CafeInfo {
     image?: string | StaticImageData,
     areaImg?: string | any,
     isFavorite?: boolean,
-    id?: number
-}
-
-export interface CafeArea {
-    area: string,
-    id: string,
-    cafes: CafeInfo[],
+    id?: number,
+    area?: string
 }
 
 export interface CafeList {

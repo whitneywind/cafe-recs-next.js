@@ -34,8 +34,6 @@ const AppProvider: FC = (props: ProviderProps) => {
 
     const addToFavorites = (cafe: CafeInfo) => {
         const updatedFavorites = state.favorites;
-        console.log('type is: ', typeof cafe)
-        console.log(cafe)
         updatedFavorites.push(cafe)
         dispatch({
             type: "ADD_TO_FAVORITES",
@@ -46,9 +44,12 @@ const AppProvider: FC = (props: ProviderProps) => {
     };
 
     const removeFromFavorites = (cafe: CafeInfo) => {
+        const filteredFavorites = state.favorites.filter((item: CafeInfo) => item.name !== cafe.name);
         dispatch({
             type: "REMOVE_FROM_FAVORITES",
-            payload: cafe
+            payload: {
+                favorites: filteredFavorites
+            }
         })
     }
 
