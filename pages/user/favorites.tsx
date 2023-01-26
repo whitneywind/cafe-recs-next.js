@@ -1,4 +1,4 @@
-import { useAppContext } from '../../context/AppContext'
+import { useAppContext } from '../../context/globalContext'
 import { ArrowLeftCircleIcon } from '@heroicons/react/24/outline'
 import { ArrowSmallRightIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
@@ -8,7 +8,7 @@ import { Cafe } from '../../types'
 type Props = {
   cafe: Cafe
 }
-const Favorites = () => {
+const favorites = () => {
   const { favorites } = useAppContext();
   const area = 'tokyo';
 
@@ -40,4 +40,4 @@ const Favorites = () => {
   )
 }
 
-export default Favorites
+export default favorites

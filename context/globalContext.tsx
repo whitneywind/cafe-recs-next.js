@@ -15,7 +15,7 @@ const defaultState: InitialStateType = {
     favorites: [],
 }
 
-export const GlobalContext = React.createContext<InitialStateType>({
+export const GlobalContext = createContext<InitialStateType>({
     user: false,
     favorites: [],
 });

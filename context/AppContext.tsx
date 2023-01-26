@@ -19,7 +19,10 @@ const defaultState: InitialStateType = {
 //     children?: React.ReactNode;
 // }
 
-export const AppContext = createContext<InitialStateType>(defaultState);
+export const AppContext = createContext<InitialStateType>({
+    user: false,
+    favorites: [],
+});
 
 export const AppProvider: FC = (props: any) => {
     const [state, dispatch] = useReducer(reducer, defaultState)

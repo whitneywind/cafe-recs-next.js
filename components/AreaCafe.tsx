@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useAppContext } from '../context/AppContext';
+import { useAppContext } from '../context/globalContext';
 import { HeartIcon } from '@heroicons/react/24/outline'
 // import Image from 'next/image'
 import { CafeInfo } from '../types'
