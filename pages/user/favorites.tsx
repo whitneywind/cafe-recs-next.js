@@ -8,7 +8,7 @@ import { Cafe } from '../../types'
 type Props = {
   cafe: Cafe
 }
-const favorites = () => {
+const Favorites = () => {
   const { favorites } = useAppContext();
   const area = 'tokyo';
 
@@ -40,4 +40,4 @@ const favorites = () => {
   )
 }
 
-export default favorites
+export default Favorites

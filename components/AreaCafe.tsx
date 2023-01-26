@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useAppContext } from '../context/AppContext';
 import { HeartIcon } from '@heroicons/react/24/outline'
-import Image from 'next/image'
+// import Image from 'next/image'
 import { CafeInfo } from '../types'
 
 const AreaCafe = (cafe: CafeInfo, index: Number) => {

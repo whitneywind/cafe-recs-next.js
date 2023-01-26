@@ -1,4 +1,4 @@
-import favorites from "../pages/user/favorites";
+// import favorites from "../pages/user/Favorites";
 
 const TOGGLE_USER = "TOGGLE_USER";
 const ADD_TO_FAVORITES = "ADD_TO_FAVORITES";
