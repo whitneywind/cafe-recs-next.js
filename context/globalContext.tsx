@@ -15,13 +15,12 @@ const defaultState: InitialStateType = {
     favorites: [],
 }
 
-// interface ProviderProps {
-//     children?: React.ReactNode;
-// }
+export const GlobalContext = React.createContext<InitialStateType>({
+    user: false,
+    favorites: [],
+});
 
-export const AppContext = createContext<InitialStateType>(defaultState);
-
-export const AppProvider: FC = (props: any) => {
+export const GlobalContextProvider = (props: any) => {
     const [state, dispatch] = useReducer(reducer, defaultState)
 
     const toggleUser = () => { dispatch({ type: "TOGGLE_USER" }) }
@@ -46,20 +45,22 @@ export const AppProvider: FC = (props: any) => {
         })
     }
 
-    return (
-        <AppContext.Provider value={{
-            favorites: state.favorites,
+  return (
+    <GlobalContext.Provider
+      value={{
+        favorites: state.favorites,
             ...state,
             toggleUser,
             toggleFavorite,
             addToFavorites,
             removeFromFavorites, 
-        }}>
-            {props.children}
-        </AppContext.Provider>
-    )
-}
+      }}
+    >
+      {props.children}
+    </GlobalContext.Provider>
+  );
+};
 
 export const useAppContext = () => {
-    return useContext(AppContext);
+    return useContext(GlobalContext);
 }
