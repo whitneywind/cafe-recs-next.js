@@ -15,7 +15,7 @@ const defaultState: InitialStateType = {
     favorites: [],
 }
 
-interface ProviderProps {
+type ProviderProps = {
     children?: React.ReactNode;
 }
 
