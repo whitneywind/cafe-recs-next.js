@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import { ChangeEvent, SyntheticEvent, useState } from 'react';
 import Link from 'next/link';
-import { useAppContext } from '../../context/appContext';
+import { useAppContext } from '../../context/globalContext';
 import { ArrowLeftCircleIcon } from '@heroicons/react/24/outline'
 
 
