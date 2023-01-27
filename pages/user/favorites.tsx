@@ -1,16 +1,13 @@
-import { useAppContext } from '../../context/globalContext'
 import { ArrowLeftCircleIcon } from '@heroicons/react/24/outline'
-import { ArrowSmallRightIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import SearchBar from '../../components/SearchBar'
 import { Cafe } from '../../types'
+import Favorites from '../../components/Favorites'
 
 type Props = {
   cafe: Cafe
 }
 const favorites = () => {
-  const { favorites } = useAppContext();
-  const area = 'tokyo';
 
   return (
     <main className='bg-[#DFB77C]/70 h-screen overflow-hidden font-special w-screen border-white'>
@@ -20,7 +17,7 @@ const favorites = () => {
       <div className='w-1/3 absolute right-0 px-2 pt-2 z-10'>
         <SearchBar />
       </div>
-      <div className='w-100 text-center mt-32 flex flex-col items-center space-y-16'>
+      {/* <div className='w-100 text-center mt-32 flex flex-col items-center space-y-16'>
         <h1 className='text-6xl text-neutral-700'>my favorites</h1>
         <div className='bg-white h-fit w-2/5 rounded '>
           {!favorites || favorites.length === 0 && <div>no favorites to show</div>}
@@ -35,7 +32,8 @@ const favorites = () => {
           })
         }
         </div>
-      </div>
+      </div> */}
+      <Favorites />
     </main>
   )
 }
