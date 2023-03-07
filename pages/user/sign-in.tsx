@@ -8,6 +8,7 @@ import { ArrowLeftCircleIcon } from '@heroicons/react/24/outline'
 const Register: NextPage = (props): JSX.Element => {
     const [userInfo, setUserInfo] = useState({ email: "", password: "" });
     const router = useRouter();
+    // const callbackUrl = (router.query?.callbackUrl as string) ?? "/";
 
     const handleChange = async (e: ChangeEvent<HTMLInputElement>) => {
         setUserInfo({
@@ -24,7 +25,6 @@ const Register: NextPage = (props): JSX.Element => {
         });
         
         router.push('../auth/protected')
-
     };
 
     return (

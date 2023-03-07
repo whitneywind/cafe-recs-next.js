@@ -7,7 +7,7 @@ export default async function handler(req, res) {
     try {
         const Cafe = await cafe.create(req.body);
         console.log(req.body)
-        res.redirect('/')
+        res.redirect(303, '/')
         if (!Cafe) {
             return res.json({"code": 'Cafe not created'})
         }
