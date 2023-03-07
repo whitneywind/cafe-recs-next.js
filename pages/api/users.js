@@ -1,5 +1,5 @@
 import main from "../../database/connection";
-import User from "../../database/schema";
+// import User from "../../database/schema";
 
 export default function getUsers(req, res) {
     main().catch(error => console.error('error with main in users', error));
