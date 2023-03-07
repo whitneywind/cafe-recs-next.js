@@ -14,7 +14,6 @@ const authOptions: NextAuthOptions = {
                     email: string;
                     password: string;
                 };
-                // perform login logic
                 // find out user from db
                 if (email !== "maggie@gmail.com" || password !== "123") {
                     console.log('nope not maggie')
