@@ -29,7 +29,7 @@ const authOptions: NextAuthOptions = {
         signIn: '/user/sign-in',
         signOut: '/user/register',
     },
-    secret: process.env.NEXTAUTH_URL
+    secret: process.env.NEXTAUTH_SECRET
 }
 
 export default NextAuth(authOptions)
