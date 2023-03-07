@@ -27,6 +27,7 @@ const authOptions: NextAuthOptions = {
     ],
     pages: {
         signIn: '/user/sign-in',
+        signOut: '/user/register',
     }
 }
 

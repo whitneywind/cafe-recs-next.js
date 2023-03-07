@@ -51,8 +51,9 @@ const AddCafe: NextPage = () => {
     }
 
     const handleSubmit = (e: SyntheticEvent) => {
-        e.preventDefault();
-        console.log(newCafe)
+        // e.preventDefault();
+        console.log(newCafe);
+        
     }
 
     return (

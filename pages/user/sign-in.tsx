@@ -37,7 +37,7 @@ const Register: NextPage = (props): JSX.Element => {
                 <p className='flex text-xl font-semibold text-white text-center pt-24 pb-4 mx-auto'>don&apos;t have an account?</p>
                 <button className='bg-[#fef5ef] w-fit px-3 mx-auto rounded-md text-lg pt-1'><Link href="/user/register">sign-up</Link></button>
             </div>
-            <form onSubmit={handleSubmit} action="/api/sign-in" method="post" className='col-span-3 px-10'>
+            <form onSubmit={handleSubmit} action="../api/sign-in" method="post" className='col-span-3 px-10'>
                 <header className='mt-10 mb-4 text-center'>
                     <h1 className='text-4xl font-bold text-slate-800'>sign in</h1>
                 </header>

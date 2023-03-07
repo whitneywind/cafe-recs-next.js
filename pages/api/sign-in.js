@@ -1,5 +1,5 @@
-import connect from '../database/connection';
-import user from '../database/schema';
+import connect from '../../database/connection';
+import user from '../../database/schema';
 
 connect();
 

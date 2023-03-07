@@ -1,5 +1,5 @@
-import connect from '../database/connection';
-import cafe from '../database/cafeSchema';
+import connect from '../../database/connection';
+import cafe from '../../database/cafeSchema';
 
 connect();
 
