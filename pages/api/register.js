@@ -6,6 +6,7 @@ connect();
 export default async function handler(req, res) {
     try {
         const User = await user.create(req.body);
+        console.log(req.body)
         res.redirect(303, '/')
         if (!User) {
             return res.json({"code": 'User not created'})

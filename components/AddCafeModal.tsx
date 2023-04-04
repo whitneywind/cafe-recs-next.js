@@ -51,9 +51,9 @@ const AddCafe: NextPage = () => {
     }
 
     const handleSubmit = (e: SyntheticEvent) => {
-        e.preventDefault();
-        alert('cafe successfully submitted to database for review. check back to see it soon!')
-        toggle();
+        // e.preventDefault();
+        console.log(newCafe);
+        
     }
 
     return (

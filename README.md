@@ -4,7 +4,7 @@ Cafe recs uses TypeScript and Next.js to provide information about cafes in vari
 
 ## Technologies
 
-This web app uses Typescript + JavaScript, TailwindCSS, React, Next.js, MongoDB Atlas, Mongoose, and NextAuth.
+This web app uses Typescript, React, Next.js, MongoDB Atlas, TailwindCSS, and mongoDB.
 
 ![Site Overview](public/overview.jpg)
 
