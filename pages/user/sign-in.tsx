@@ -23,8 +23,14 @@ const Register: NextPage = (props): JSX.Element => {
             password: userInfo.password,
             redirect: false,
         });
-        
-        router.push('../auth/protected')
+        console.log('userinfo from tsx page: ', userInfo)
+        if (res?.error) {
+            console.log('error with signin')
+            console.log('signin error: ', JSON.stringify(res.error));
+        } else {
+            console.log('no error with signin on tsx page')
+            router.push('../auth/protected')
+        }
     };
 
     return (
@@ -35,9 +41,11 @@ const Register: NextPage = (props): JSX.Element => {
         <div className="w-3/4 xl:w-1/2 mx-auto bg-[#FAF5EF] rounded mt-36 text-slate-800 shadow-md grid grid-cols-4">
             <div className='col-span-1 bg-[#96897B] text-slate-800 rounded-l flex flex-col'>
                 <p className='flex text-xl font-semibold text-white text-center pt-24 pb-4 mx-auto'>don&apos;t have an account?</p>
-                <button className='bg-[#fef5ef] w-fit px-3 mx-auto rounded-md text-lg pt-1'><Link href="/user/register">sign-up</Link></button>
+                <button className='bg-[#fef5ef] w-fit px-3 mx-auto rounded-md text-lg pt-1'>
+                    <Link href="/user/register">sign-up</Link>
+                </button>
             </div>
-            <form onSubmit={handleSubmit} action="../api/sign-in" method="post" className='col-span-3 px-10'>
+            <form onSubmit={handleSubmit} action="/api/sign-in" method="post" className='col-span-3 px-10'>
                 <header className='mt-10 mb-4 text-center'>
                     <h1 className='text-4xl font-bold text-slate-800'>sign in</h1>
                 </header>
@@ -50,7 +58,14 @@ const Register: NextPage = (props): JSX.Element => {
                         className='rounded my-2 pt-2 text-lg w-4/5'
                         onChange={handleChange} 
                     />
-                    <input required type="password" name="password" placeholder="   password" className='rounded my-2 pt-2 text-lg w-4/5' />
+                    <input 
+                        required
+                        type="password"
+                        name="password"
+                        placeholder="   password"
+                        className='rounded my-2 pt-2 text-lg w-4/5'
+                        onChange={handleChange}
+                    />
                     <button 
                         className='bg-[#96897B] w-fit px-3 rounded-md mt-6 text-lg pt-1 text-white' type="submit">
                         sign-in

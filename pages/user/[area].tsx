@@ -7,7 +7,7 @@ import { ArrowLeftCircleIcon } from '@heroicons/react/24/outline'
 import AreaCafe from '../../components/AreaCafe';
 import AddCafeModal from '../../components/AddCafeModal'
 import { GetServerSideProps } from 'next'
-import connect from '../../database/connection'
+// import connect from '../../database/connection'
 
 type Props = {
   caves?: {}
@@ -68,6 +68,7 @@ export default Area
 //   } catch (e) {
 //     console.log(e);
 //   }
+//   console.log(caves)
 //   return {
 //     props: { caves: JSON.parse(JSON.stringify(caves)) },
 // };

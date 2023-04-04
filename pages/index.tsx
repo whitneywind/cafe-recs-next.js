@@ -4,6 +4,7 @@ import cafeOptions from '../assets/cafeOptions';
 import cafeOptionsJapan from '../assets/cafeOptionsJapan';
 import Link from 'next/link';
 import { BookmarkSquareIcon } from '@heroicons/react/24/outline'
+import Signout from './user/sign-out';
 
 
 const Home: NextPage = () => {
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
         <Link href="/user/register">
           <a className="cursor-pointer text-stone-200 text-xl pt-1 hover:text-stone-400">sign-in / register</a>
         </Link>
+        <Signout />
       </nav>
       <main className='flex items-center'>
         <div className='bg-main-bg bg-center bg-no-repeat bg-cover overflow-hidden h-100 mt-32 w-4/5 md:w-2/3 lg:w-1/2 flex flex-col text-center mx-auto text-white py-24 pb-40 rounded'>

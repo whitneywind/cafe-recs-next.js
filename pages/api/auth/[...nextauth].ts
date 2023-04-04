@@ -9,7 +9,7 @@ const authOptions: NextAuthOptions = {
         CredentialsProvider({
             type: 'credentials',
             credentials: {},
-            authorize(credentials, req) {
+            async authorize(credentials, req) {
                 const { email, password } = credentials as {
                     email: string;
                     password: string;
@@ -26,7 +26,8 @@ const authOptions: NextAuthOptions = {
     ],
     pages: {
         signIn: '/user/sign-in',
-        signOut: '/user/register',
+        signOut: '/user/sign-out',
+        // newUser: '/user/register'
     },
     secret: process.env.NEXTAUTH_SECRET
 }
